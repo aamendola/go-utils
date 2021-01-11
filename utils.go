@@ -10,3 +10,9 @@ func FailOnError(err error, msg string) {
 	}
 }
 
+func PanicOnError(err error) {
+	if err != nil {
+		panic(err)
+	}
+}
+
