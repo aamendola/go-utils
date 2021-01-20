@@ -16,3 +16,6 @@ func PanicOnError(err error) {
 	}
 }
 
+func PrintTypeAndValue(description string, obj interface{}) {
+	log.Printf("--> %s %T %s", description, obj, obj)
+}
