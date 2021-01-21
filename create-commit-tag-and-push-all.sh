@@ -15,6 +15,6 @@ git tag -a $VERSION -m "Last commit $COMMIT_HASH"
 git push origin $BRANCH
 git push origin --tags
 
-TEXT_TO_SEARCH=cat go.mod | head -1 | awk '{print $2}'
+TEXT_TO_SEARCH=`cat go.mod | head -1 | awk '{print $2}'`
 find ../../ -name "go.mod" -exec grep $TEXT_TO_SEARCH {} \;
 
