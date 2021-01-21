@@ -16,6 +16,6 @@ git push origin $BRANCH
 git push origin --tags
 
 TEXT_TO_SEARCH=`cat go.mod | head -1 | awk '{print $2}'`
-TEXT_TO_SEARCH="$TEXT_TO_SEARCH v
+TEXT_TO_SEARCH="$TEXT_TO_SEARCH v"
 find ../ -name go.mod -exec grep $TEXT_TO_SEARCH {} \;
 
