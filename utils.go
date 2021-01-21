@@ -18,7 +18,7 @@ func PanicOnError(err error) {
 }
 
 func PrintTypeAndValue(description string, obj interface{}) {
-	log.Printf("==[%s, %T, %s]\n", description, obj, obj)
+	log.Printf("[name, type, value]==[%s, %T, %v]\n", description, obj, obj)
 }
 
 // Color ...
@@ -37,6 +37,5 @@ const (
 
 // PrintColor ...
 func PrintColor(color Color, str string) {
-	//fmt.Println(string(color), "\n", str, string(colorReset))
 	fmt.Println(string(color), "\n"+str, string(colorReset))
 }
