@@ -16,7 +16,7 @@ git push origin $BRANCH
 git push origin --tags
 
 MODULE_SEARCH=`cat go.mod | head -1 | awk '{print $2}'`
-MODULE_SEARCH="$TEXT_TO_SEARCH v"
+MODULE_SEARCH="$MODULE_SEARCH v"
 echo "\nMaybe you want to check these projects..."
 find ../ -name go.mod -exec grep -H "$MODULE_SEARCH" {} \;
 
