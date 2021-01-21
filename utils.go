@@ -26,13 +26,13 @@ type Color string
 
 const (
 	colorReset  Color = "\033[0m"
-	colorRed    Color = "\033[31m"
-	colorGreen  Color = "\033[32m"
-	colorYellow Color = "\033[33m"
-	colorBlue   Color = "\033[34m"
-	colorPurple Color = "\033[35m"
-	colorCyan   Color = "\033[36m"
-	colorWhite  Color = "\033[37m"
+	ColorRed    Color = "\033[31m"
+	ColorGreen  Color = "\033[32m"
+	ColorYellow Color = "\033[33m"
+	ColorBlue   Color = "\033[34m"
+	ColorPurple Color = "\033[35m"
+	ColorCyan   Color = "\033[36m"
+	ColorWhite  Color = "\033[37m"
 )
 
 // PrintColor ...
