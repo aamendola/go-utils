@@ -37,5 +37,5 @@ const (
 
 // PrintColor ...
 func PrintColor(color Color, str string) {
-	fmt.Println("\n", string(color), str, string(colorReset))
+	fmt.Println(string(color), "\n", str, string(colorReset))
 }
