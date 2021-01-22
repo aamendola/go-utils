@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"fmt"
 	"log"
 )
 
@@ -37,5 +36,5 @@ const (
 
 // PrintColor ...
 func PrintColor(color Color, str string) {
-	fmt.Println(string(color), "\n"+str, string(colorReset))
+	log.Println(string(color), "\n"+str, string(colorReset))
 }
