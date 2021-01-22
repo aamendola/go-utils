@@ -17,7 +17,7 @@ func PanicOnError(err error) {
 }
 
 func PrintTypeAndValue(description string, obj interface{}) {
-	log.Printf("[var, type, value]=[%s, %T, %v]\n", description, obj, obj)
+	log.Printf("[VTV]=[%s, %T, %v]\n", description, obj, obj)
 }
 
 // Color ...
