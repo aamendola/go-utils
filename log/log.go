@@ -12,16 +12,9 @@ func Info(eventID string, args ...interface{}) {
 }
 
 // Panic ...
-func Panic(eventID string, err error, args ...interface{}) {
+func Panic(err error, args ...interface{}) {
 	if err != nil {
-		if len(args) > 0 {
-			logrus.WithFields(logrus.Fields{
-				"eventId": eventID,
-			}).Error(args...)
-		}
-		logrus.WithFields(logrus.Fields{
-			"eventId": eventID,
-		}).Error(err)
+		logrus.Error(err, args)
 	}
 }
 
@@ -42,10 +35,7 @@ func TraceablePanic(eventID string, err error, args ...interface{}) {
 // Fatal ...
 func Fatal(err error, args ...interface{}) {
 	if err != nil {
-		if len(args) > 0 {
-			logrus.Error(args...)
-		}
-		logrus.Fatal(err)
+		logrus.Fatal(err, args)
 	}
 }
 
@@ -61,8 +51,4 @@ func TraceableFatal(eventID string, err error, args ...interface{}) {
 			"eventId": eventID,
 		}).Fatal(err)
 	}
-}
-
-func kk() {
-
 }
