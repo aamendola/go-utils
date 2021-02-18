@@ -25,8 +25,32 @@ func Panic(eventID string, err error, args ...interface{}) {
 	}
 }
 
+// TraceablePanic ...
+func TraceablePanic(eventID string, err error, args ...interface{}) {
+	if err != nil {
+		if len(args) > 0 {
+			logrus.WithFields(logrus.Fields{
+				"eventId": eventID,
+			}).Error(args...)
+		}
+		logrus.WithFields(logrus.Fields{
+			"eventId": eventID,
+		}).Error(err)
+	}
+}
+
 // Fatal ...
-func Fatal(eventID string, err error, args ...interface{}) {
+func Fatal(err error, args ...interface{}) {
+	if err != nil {
+		if len(args) > 0 {
+			logrus.Error(args...)
+		}
+		logrus.Fatal(err)
+	}
+}
+
+// TraceableFatal ...
+func TraceableFatal(eventID string, err error, args ...interface{}) {
 	if err != nil {
 		if len(args) > 0 {
 			logrus.WithFields(logrus.Fields{
@@ -37,4 +61,8 @@ func Fatal(eventID string, err error, args ...interface{}) {
 			"eventId": eventID,
 		}).Fatal(err)
 	}
+}
+
+func kk() {
+
 }
