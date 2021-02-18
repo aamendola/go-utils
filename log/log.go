@@ -5,8 +5,8 @@ import (
 )
 
 // Info ...
-func Info(eventID, message string) {
+func Info(eventID string, args ...interface{}) {
 	logrus.WithFields(logrus.Fields{
 		"eventId": eventID,
-	}).Info(message)
+	}).Info(args...)
 }
