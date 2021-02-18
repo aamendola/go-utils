@@ -4,6 +4,7 @@ import (
 	"log"
 )
 
+/*
 func FailOnError(err error, msg string) {
 	if err != nil {
 		log.Fatalf("%s: %s", msg, err)
@@ -15,7 +16,9 @@ func PanicOnError(err error) {
 		panic(err)
 	}
 }
+*/
 
+// PrintTypeAndValue ...
 func PrintTypeAndValue(description string, obj interface{}) {
 	log.Printf("[VTV]=[%s, %T, %v]\n", description, obj, obj)
 }
